@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="port.css">
+    <title>Krishna Vardhan</title>
+    <script src="https://kit.fontawesome.com/69a352a5f2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo"><b>*</b>Krishna</div>
+                <ul class="nav-items">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+        </nav>
+        <div class="wrapper">
+            <div class="cols cols0">
+                <span class="topline">Hello</span>
+                <h1>I'm <span class="multiText">AIML trainee</span></h1>
+                <p>Currently pursuing my bacherlors at SRKR engineeing college</p>
+                <div class="buttons">
+                    <button onclick="download_resume()">Download Resume</button>
+                    <button>Add as Intern</button>
+                </div>
+            </div>
+            <div class="cols cols1">
+                <div class="imgbox">
+                    <img src="images/luffy.png">
+                    <img src="images/splash.png" id="splash">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function download_resume(){
+         // Replace 'path/to/your/pdf.pdf' with the actual path to your PDF file
+      var pdfURL = 'https://drive.google.com/file/d/1ipQrCqcKRLKpdak2RZXJsFsPB58uCmck/view?usp=sharing';
+
+// Create a temporary <a> element
+var link = document.createElement('a');
+link.href = pdfURL;
+link.download = 'Krishna_resume.pdf'; // You can set the downloaded file name here
+
+// Append the link to the document body and simulate a click
+document.body.appendChild(link);
+link.click();
+
+// Cleanup
+document.body.removeChild(link);
+    }
+</script>
+</html>
